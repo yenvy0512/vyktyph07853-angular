@@ -11,13 +11,14 @@
         </h4>
         <h5>${{product.price}}</h5>
         <p class="card-text">{{product.desc}}</p>
-        <p class="card-text">{{product.status ? 'In stock': 'Out stock'}}</p>
+        <h2  class="card-text">{{product.status ? 'In stock': 'Out stock'}}</h2>
       </div>
       <div class="card-footer">
           <button class="btn btn-primary" (click)="removeItem(product.id)">Delete</button>
-          <button class="btn btn-primary" (click)="showDetail(product)">Click me!</button>
+          <button class="btn btn-primary" (click)="showDetail(product)">Detail</button>
+          <button class="btn btn-primary" >Edit</button>
           <!-- <input type="text" name="" id="" (keyup)="changeName($event)" class="form-control mt-3"> -->
-          <input type="text" name="" id="" [(ngModel)]="product.name" class="form-control mt-3">
+          <!-- <input type="text" name="" id="" [(ngModel)]="product.name" class="form-control mt-3"> -->
       </div>
     </div>
   </div>
@@ -25,5 +26,5 @@
 </div>
 
 <div *ngIf="selected">
-  <app-product [data]="selected"></app-product>
+ <h3> <app-product [data]="selected"></app-product></h3>
 </div>
