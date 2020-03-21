@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
-import { ActivatedRoute } from '@angular/router';
-import { Product } from '../Product';
 
+import { Product } from '../Product';
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class ProductListComponent implements OnInit {
-  selected: Product;
+export class HomeComponent implements OnInit {
+selected: Product;
   products: Product[];
 
   constructor(
